@@ -1,0 +1,82 @@
+Commander
+1 Elda, Conjurer of Spectacle
+
+Creatures
+1 Bonescythe Sliver
+1 Bramble Sovereign
+1 Brood Sliver
+1 Constricting Sliver
+1 Firemane Commando
+1 First Sliver's Chosen
+1 Fungus Sliver
+1 Garruk's Packleader
+1 Gemhide Sliver
+1 Groundshaker Sliver
+1 Harmonic Sliver
+1 Heartwood Storyteller
+1 Helpful Hunter
+1 Horned Sliver
+1 Lancer Sliver
+1 Loyal Warhound
+1 Lucy MacLean, Positively Armed
+1 Manaweft Sliver
+1 Megantic Sliver
+1 Might Sliver
+1 Muscle Sliver
+1 Outcaster Trailblazer
+1 Poultice Sliver
+1 Predatory Sliver
+1 Pulmonic Sliver
+1 Quick Sliver
+1 Realmwalker
+1 Reflex Sliver
+1 Regal Sliver
+1 Root Sliver
+1 Rumor Gatherer
+1 Sentinel Sliver
+1 Sidewinder Sliver
+1 Silverquill Lecturer
+1 Sinew Sliver
+1 Solemn Simulacrum
+1 Spinneret Sliver
+1 Tempered Sliver
+1 Trostani, Selesnya's Voice
+1 Venom Sliver
+1 Vitu-Ghazi Guildmage
+1 Ward Sliver
+1 Wood Elves
+
+Sorceries
+1 Cultivate
+1 Farseek
+1 Full Flowering
+1 Nature's Lore
+1 Rampant Growth
+1 Rishkar's Expertise
+
+Instants
+1 Druid's Deliverance
+1 Return of the Wildspeaker
+1 Rootborn Defenses
+1 Second Harvest
+1 Sundering Growth
+
+Artifacts
+1 Arcane Signet
+1 Firdoch Core
+1 Hivestone
+1 Thrumming Hivepool
+1 Twinning Staff
+1 Vanquisher's Banner
+
+Enchantments
+1 Growing Ranks
+1 Muster the Departed
+1 Song of the Worldsoul
+
+Lands
+1 Canopy Vista
+17 Forest
+16 Plains
+1 Scattered Groves
+1 Temple Garden

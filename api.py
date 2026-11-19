@@ -138,3 +138,38 @@ def get_job(jobid:str,x_api_key:str|None=Header(default=None)):
     with LOCK:
         if jobid not in JOBS: raise HTTPException(404,"Job não encontrado")
         return dict(JOBS[jobid])
+
+# A one-shot staging smoke test: execution occurs on Railway, never on a mock engine.
+# Disable CARDORAMA_SELFTEST_GAMES after testing. The service can remain private.
+import json as _json
+from threading import Thread as _Thread
+
+@app.on_event("startup")
+def _start_smoke_test():
+    count_raw = os.getenv("CARDORAMA_SELFTEST_GAMES")
+    if not count_raw:
+        return
+    try:
+        count = int(count_raw)
+        if count < 1 or count > 10:
+            raise ValueError("selftest supports 1 through 10 games")
+        deck = Path(__file__).with_name("examples").joinpath("sliver_demonstration.txt").read_text(encoding="utf-8")
+        entry = Deck(name="Sliver Demonstration", decklist=deck)
+        payload = Request(format="commander", games=count, decks=[entry, entry])
+        for d in payload.decks:
+            convert(d.decklist,d.name,payload.format)
+    except Exception as exc:
+        print("CARDORAMA_SELFTEST_ERROR="+str(exc), flush=True)
+        return
+    jid = "staging-"+str(uuid4())
+    with LOCK:
+        JOBS[jid] = {"id":jid,"status":"queued","games_requested":count}
+    def run():
+        print("CARDORAMA_SELFTEST_START="+_json.dumps({"job":jid,"games":count,"deck":"Sliver Demonstration vs itself","forge_jar":str(FORGE)}),flush=True)
+        run_job(jid,payload)
+        record = dict(JOBS[jid])
+        if "raw_output" in record:
+            output = record.pop("raw_output")
+            record["engine_output_tail"] = output[-12000:]
+        print("CARDORAMA_SELFTEST_RESULT="+_json.dumps(record,ensure_ascii=False),flush=True)
+    _Thread(target=run,daemon=True,name="cardorama-staging-selftest").start()
