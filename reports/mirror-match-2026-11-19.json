@@ -1,0 +1,85 @@
+{
+  "project": "Cardorama",
+  "engine": "Forge 2.0.16",
+  "environment": "Railway staging",
+  "run_at": "2026-11-19",
+  "deck": "Sliver Demonstration",
+  "format": "Commander",
+  "mirror_match": true,
+  "games_requested": 10,
+  "games_processed_by_forge": 10,
+  "results_reliable": 8,
+  "errors": [
+    "Game 4 stopped slow match as draw; engine logged winner incorrectly",
+    "Game 7 stopped slow match as draw; Java stderr interrupted stdout Game Result, making previous parser miss it"
+  ],
+  "wins": {
+    "player_1": 6,
+    "player_2": 2
+  },
+  "timeouts": 2,
+  "failed_for_previous_api": true,
+  "results": [
+    {
+      "game": 1,
+      "winner": 1,
+      "duration_ms": 37412,
+      "status": "win"
+    },
+    {
+      "game": 2,
+      "winner": 2,
+      "duration_ms": 17644,
+      "status": "win"
+    },
+    {
+      "game": 3,
+      "winner": 1,
+      "duration_ms": 58779,
+      "status": "win"
+    },
+    {
+      "game": 4,
+      "winner": null,
+      "duration_ms": 60001,
+      "status": "timeout"
+    },
+    {
+      "game": 5,
+      "winner": 1,
+      "duration_ms": 3331,
+      "status": "win"
+    },
+    {
+      "game": 6,
+      "winner": 2,
+      "duration_ms": 13134,
+      "status": "win"
+    },
+    {
+      "game": 7,
+      "winner": null,
+      "duration_ms": 60001,
+      "status": "timeout"
+    },
+    {
+      "game": 8,
+      "winner": 1,
+      "duration_ms": 8203,
+      "status": "win"
+    },
+    {
+      "game": 9,
+      "winner": 1,
+      "duration_ms": 26425,
+      "status": "win"
+    },
+    {
+      "game": 10,
+      "winner": 1,
+      "duration_ms": 8562,
+      "status": "win"
+    }
+  ],
+  "note": "Timeouts deliberately excluded from wins, contrary to Forge's ambiguous Match Result 6-4."
+}

@@ -1,5 +1,6 @@
 """Cardorama Forge headless simulation bridge. Experimental, not validated against live Forge."""
 import os, re, secrets, subprocess, tempfile
+from parsing import parse_results
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
@@ -8,7 +9,7 @@ from uuid import uuid4
 from fastapi import FastAPI, Header, HTTPException
 from pydantic import BaseModel, Field, ConfigDict
 
-app = FastAPI(title="Cardorama Forge Simulation API", version="0.2.0")
+app = FastAPI(title="Cardorama Forge Simulation API", version="0.3.0")
 FORGE = Path(os.getenv("FORGE_JAR", "/opt/forge/forge.jar"))
 POOL = ThreadPoolExecutor(max_workers=1)
 LOCK = Lock()
@@ -90,19 +91,14 @@ def run_job(id, body):
             heap = max(256,min(8192,int(os.getenv("FORGE_HEAP_MB","512"))))
             cmd = ["java",f"-Xmx{heap}m","-Djava.awt.headless=true","-jar",str(FORGE),"sim","-d",*filenames,"-D",directory,"-n",str(body.games),"-f",body.format,"-q","-c",str(int(os.getenv("FORGE_GAME_CLOCK","90")))]
             timeout = max(30,min(7200,int(os.getenv("FORGE_TIMEOUT","600"))))
-            completed = subprocess.run(cmd,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,encoding="utf-8",errors="replace",timeout=timeout,cwd=str(FORGE.parent),env={k:v for k,v in os.environ.items() if k in ("PATH","HOME","LANG","JAVA_HOME","TMPDIR")},check=False)
+            completed = subprocess.run(cmd,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding="utf-8",errors="replace",timeout=timeout,cwd=str(FORGE.parent),env={k:v for k,v in os.environ.items() if k in ("PATH","HOME","LANG","JAVA_HOME","TMPDIR")},check=False)
             output = completed.stdout[-80000:]
-        winners = {}
-        for match in WIN.finditer(output):
-            n, ms, player, reported = match.groups()
-            player = int(player)
-            if player < 1 or player > len(body.decks) or reported != body.decks[player-1].name or int(n) in winners: continue
-            winners[int(n)] = {"winner":player,"duration_ms":int(ms)}
-        for match in DRAW.finditer(output):
-            n,ms = map(int,match.groups())
-            if n not in winners: winners[n] = {"winner":None,"duration_ms":ms}
-        valid = sorted(winners) == list(range(1,body.games+1)) and output.count("Game Result:")==body.games and not re.search(r"Could not load deck|No deck found|Exception in thread|Game threw exception",output,re.I)
-        result = {"status":"completed" if completed.returncode == 0 and valid else "failed","exit_code":completed.returncode,"games_completed":len(winners),"results":[{"game":n,**winners[n]} for n in sorted(winners)],"raw_output":output,"warning":"Simulações IA contra IA, não probabilidades de vitória contra humanos"}
+            error_output = completed.stderr[-12000:]
+        parsed = parse_results(output, body.games, [d.name for d in body.decks], int(os.getenv("FORGE_GAME_CLOCK","90")))
+        fatal = bool(re.search(r"Could not load deck|No deck found|Exception in thread|Game threw exception", output + error_output, re.I))
+        ok = completed.returncode == 0 and parsed["valid"] and not fatal
+        status = "completed" if ok and parsed["timeouts"] == 0 else "partial" if ok else "failed"
+        result = {"status":status,"exit_code":completed.returncode,**parsed,"raw_output":output,"stderr_tail":error_output,"warning":"IA contra IA; interrupções por tempo não são vitórias, mesmo que o Forge exiba vencedor"}
     except Exception as exc:
         result = {"status":"failed","error":str(exc)}
     with LOCK:
