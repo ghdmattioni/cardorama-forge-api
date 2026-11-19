@@ -4,7 +4,7 @@ Integração **experimental** de simulações Magic: The Gathering via motor For
 
 ## Status
 
-Servidor HTTP, validação, autenticação por `X-API-Key` e execução de subprocesso implementados. **Partidas reais com o Forge ainda não homologadas**. `/readyz` apenas verifica a presença do JAR; use o teste real de partida antes de considerar o motor funcional. Jobs em memória se perdem no restart; não usar em produção multiusuário.
+Servidor HTTP, validação, autenticação por `X-API-Key` e execução de subprocesso implementados. **Partidas reais foram executadas no Railway; simulador detalhado segue em homologação**. `/readyz` apenas verifica a presença do JAR; use o teste real de partida antes de considerar o motor funcional. Jobs em memória se perdem no restart; não usar em produção multiusuário.
 
 ## Deploy (Railway)
 
@@ -12,7 +12,7 @@ Servidor HTTP, validação, autenticação por `X-API-Key` e execução de subpr
 - Fonte: este repositório, branch `main`.
 - Dockerfile: instala Java 17, Python 3.12 e obtém a release oficial Forge 2.0.16 no build.
 - Configure **CARDORAMA_API_KEY** como segredo privado; nunca coloque a chave no GitHub.
-- Variáveis: `FORGE_HEAP_MB=512`, `FORGE_GAME_CLOCK=90`, `FORGE_TIMEOUT=600`.
+- Variáveis: `FORGE_HEAP_MB=512`, `FORGE_GAME_CLOCK=300` (5 minutos por partida), `FORGE_TIMEOUT=3600` (limite total do lote).
 - Limite atual Railway: 1 GB de RAM. Pode ser insuficiente para Commander.
 - Não exponha domínio público para simulações antes de quotas, armazenamento persistente e autenticação por usuário.
 

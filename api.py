@@ -97,8 +97,8 @@ def run_job(id, body):
             cmd = ["java",f"-Xmx{heap}m","-Djava.awt.headless=true","-jar",str(FORGE),"sim","-d",*filenames,"-D",directory,"-n",str(body.games),"-f",body.format]
             if not detailed:
                 cmd.append("-q")
-            cmd += ["-c",str(int(os.getenv("FORGE_GAME_CLOCK","90")))]
-            timeout = max(30,min(7200,int(os.getenv("FORGE_TIMEOUT","600"))))
+            cmd += ["-c",str(int(os.getenv("FORGE_GAME_CLOCK","300")))]
+            timeout = max(30,min(7200,int(os.getenv("FORGE_TIMEOUT","3600"))))
             # Disk-backed log avoids subprocess.PIPE retaining unbounded verbose game logs.
             with tempfile.TemporaryFile(mode="w+b") as stdout_file, tempfile.TemporaryFile(mode="w+b") as stderr_file:
                 completed = subprocess.run(cmd,stdout=stdout_file,stderr=stderr_file,timeout=timeout,cwd=str(FORGE.parent),env={k:v for k,v in os.environ.items() if k in ("PATH","HOME","LANG","JAVA_HOME","TMPDIR")},check=False)
@@ -112,7 +112,7 @@ def run_job(id, body):
                 error_bytes = stderr_file.tell()
                 stderr_file.seek(max(0,error_bytes-12_000))
                 error_output = stderr_file.read().decode("utf-8",errors="replace")
-        parsed = parse_results(output, body.games, [d.name for d in body.decks], int(os.getenv("FORGE_GAME_CLOCK","90")))
+        parsed = parse_results(output, body.games, [d.name for d in body.decks], int(os.getenv("FORGE_GAME_CLOCK","300")))
         fatal = bool(re.search(r"Could not load deck|No deck found|Exception in thread|Game threw exception", output + error_output, re.I))
         ok = completed.returncode == 0 and parsed["valid"] and not fatal and not truncated
         status = "completed" if ok and parsed["timeouts"] == 0 else "partial" if ok else "failed"
