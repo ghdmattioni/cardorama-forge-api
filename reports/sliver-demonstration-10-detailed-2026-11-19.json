@@ -1,0 +1,964 @@
+{
+  "report_date": "2026-11-19",
+  "engine": "Forge 2.0.16",
+  "environment": "Railway staging",
+  "mode": "detailed",
+  "matchup": "Sliver Demonstration x Sliver Demonstration",
+  "clock_seconds": 300,
+  "source_deployment": "7ca94a82-5e93-431e-9f5d-94842a4c8e08",
+  "games_requested": 10,
+  "games_processed": 10,
+  "games_completed": 9,
+  "wins": {
+    "1": 7,
+    "2": 2
+  },
+  "draws": 0,
+  "timeouts": 1,
+  "results": [
+    {
+      "game": 1,
+      "status": "win",
+      "winner": 1,
+      "duration_ms": 60753
+    },
+    {
+      "game": 2,
+      "status": "win",
+      "winner": 1,
+      "duration_ms": 8564
+    },
+    {
+      "game": 3,
+      "status": "win",
+      "winner": 1,
+      "duration_ms": 3756
+    },
+    {
+      "game": 4,
+      "status": "win",
+      "winner": 1,
+      "duration_ms": 4303
+    },
+    {
+      "game": 5,
+      "status": "win",
+      "winner": 1,
+      "duration_ms": 16404
+    },
+    {
+      "game": 6,
+      "status": "win",
+      "winner": 2,
+      "duration_ms": 20393
+    },
+    {
+      "game": 7,
+      "status": "win",
+      "winner": 1,
+      "duration_ms": 8557
+    },
+    {
+      "game": 8,
+      "status": "win",
+      "winner": 1,
+      "duration_ms": 3431
+    },
+    {
+      "game": 9,
+      "status": "win",
+      "winner": 2,
+      "duration_ms": 1650
+    },
+    {
+      "game": 10,
+      "status": "timeout",
+      "winner": null,
+      "duration_ms": 300000
+    }
+  ],
+  "log_bytes": 294822,
+  "logs_truncated": false,
+  "events_captured": 4265,
+  "cards_observed": 64,
+  "not_observed": [
+    "Lucy MacLean, Positively Armed",
+    "Silverquill Lecturer",
+    "Sinew Sliver",
+    "Trostani, Selesnya's Voice",
+    "Song of the Worldsoul"
+  ],
+  "card_analysis": {
+    "Elda, Conjurer of Spectacle": {
+      "observed_games": 5,
+      "played_games": 5,
+      "cast_games": 5,
+      "event_counts": {
+        "spell_cast": 5,
+        "stack_resolve": 5,
+        "combat": 5,
+        "damage": 6,
+        "zone_change": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Return of the Wildspeaker": {
+      "observed_games": 1,
+      "played_games": 1,
+      "cast_games": 1,
+      "event_counts": {
+        "spell_cast": 1,
+        "stack_resolve": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Heartwood Storyteller": {
+      "observed_games": 1,
+      "played_games": 1,
+      "cast_games": 1,
+      "event_counts": {
+        "spell_cast": 3,
+        "ability_triggered": 16,
+        "stack_resolve": 5
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Outcaster Trailblazer": {
+      "observed_games": 5,
+      "played_games": 5,
+      "cast_games": 5,
+      "event_counts": {
+        "spell_cast": 7,
+        "stack_resolve": 21,
+        "ability_triggered": 14,
+        "damage": 4,
+        "zone_change": 2,
+        "combat": 4
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "First Sliver's Chosen": {
+      "observed_games": 2,
+      "played_games": 2,
+      "cast_games": 2,
+      "event_counts": {
+        "spell_cast": 2,
+        "stack_resolve": 17,
+        "combat": 13,
+        "damage": 8,
+        "ability_triggered": 5
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Vitu-Ghazi Guildmage": {
+      "observed_games": 3,
+      "played_games": 3,
+      "cast_games": 3,
+      "event_counts": {
+        "spell_cast": 3,
+        "stack_resolve": 9,
+        "combat": 11,
+        "damage": 8,
+        "zone_change": 2,
+        "ability_activated": 3
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Groundshaker Sliver": {
+      "observed_games": 1,
+      "played_games": 1,
+      "cast_games": 1,
+      "event_counts": {
+        "spell_cast": 1,
+        "stack_resolve": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Rishkar's Expertise": {
+      "observed_games": 1,
+      "played_games": 1,
+      "cast_games": 1,
+      "event_counts": {
+        "spell_cast": 1,
+        "stack_resolve": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Muster the Departed": {
+      "observed_games": 2,
+      "played_games": 2,
+      "cast_games": 2,
+      "event_counts": {
+        "spell_cast": 3,
+        "stack_resolve": 5,
+        "ability_triggered": 2,
+        "zone_change": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Garruk's Packleader": {
+      "observed_games": 1,
+      "played_games": 1,
+      "cast_games": 1,
+      "event_counts": {
+        "spell_cast": 1,
+        "stack_resolve": 1,
+        "combat": 4,
+        "damage": 3,
+        "ability_triggered": 5
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Druid's Deliverance": {
+      "observed_games": 1,
+      "played_games": 1,
+      "cast_games": 1,
+      "event_counts": {
+        "spell_cast": 1,
+        "stack_resolve": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Constricting Sliver": {
+      "observed_games": 2,
+      "played_games": 2,
+      "cast_games": 2,
+      "event_counts": {
+        "spell_cast": 4,
+        "ability_triggered": 11,
+        "stack_resolve": 23,
+        "zone_change": 1,
+        "combat": 6,
+        "damage": 8
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Vanquisher's Banner": {
+      "observed_games": 2,
+      "played_games": 2,
+      "cast_games": 2,
+      "event_counts": {
+        "spell_cast": 2,
+        "replacement_effect": 2,
+        "stack_resolve": 4,
+        "ability_triggered": 3,
+        "zone_change": 2
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Thrumming Hivepool": {
+      "observed_games": 4,
+      "played_games": 4,
+      "cast_games": 4,
+      "event_counts": {
+        "spell_cast": 4,
+        "stack_resolve": 5,
+        "ability_triggered": 12,
+        "zone_change": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Bonescythe Sliver": {
+      "observed_games": 4,
+      "played_games": 3,
+      "cast_games": 3,
+      "event_counts": {
+        "discard": 1,
+        "spell_cast": 7,
+        "stack_resolve": 23,
+        "combat": 10,
+        "damage": 17,
+        "ability_triggered": 7,
+        "zone_change": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Solemn Simulacrum": {
+      "observed_games": 3,
+      "played_games": 2,
+      "cast_games": 2,
+      "event_counts": {
+        "spell_cast": 2,
+        "stack_resolve": 7,
+        "ability_triggered": 4,
+        "zone_change": 1,
+        "combat": 1,
+        "damage": 2,
+        "discard": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Sidewinder Sliver": {
+      "observed_games": 2,
+      "played_games": 2,
+      "cast_games": 2,
+      "event_counts": {
+        "spell_cast": 6,
+        "stack_resolve": 9,
+        "combat": 2,
+        "damage": 3,
+        "zone_change": 1,
+        "ability_triggered": 3
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Firemane Commando": {
+      "observed_games": 4,
+      "played_games": 4,
+      "cast_games": 4,
+      "event_counts": {
+        "spell_cast": 5,
+        "stack_resolve": 11,
+        "combat": 16,
+        "damage": 11,
+        "ability_triggered": 11,
+        "zone_change": 3
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Bramble Sovereign": {
+      "observed_games": 1,
+      "played_games": 1,
+      "cast_games": 1,
+      "event_counts": {
+        "spell_cast": 1,
+        "stack_resolve": 2,
+        "ability_triggered": 2,
+        "combat": 1,
+        "damage": 2,
+        "zone_change": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Rootborn Defenses": {
+      "observed_games": 1,
+      "played_games": 1,
+      "cast_games": 1,
+      "event_counts": {
+        "spell_cast": 1,
+        "stack_resolve": 5
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Predatory Sliver": {
+      "observed_games": 4,
+      "played_games": 4,
+      "cast_games": 4,
+      "event_counts": {
+        "spell_cast": 4,
+        "stack_resolve": 6,
+        "ability_triggered": 2,
+        "combat": 4,
+        "damage": 5,
+        "zone_change": 2
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Spinneret Sliver": {
+      "observed_games": 3,
+      "played_games": 3,
+      "cast_games": 3,
+      "event_counts": {
+        "spell_cast": 3,
+        "stack_resolve": 6,
+        "combat": 3,
+        "damage": 6,
+        "ability_triggered": 3,
+        "zone_change": 2
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Scattered Groves": {
+      "observed_games": 3,
+      "played_games": 2,
+      "cast_games": 0,
+      "event_counts": {
+        "replacement_effect": 4,
+        "land_played": 2,
+        "mana": 16,
+        "discard": 1,
+        "ability_activated": 1,
+        "stack_resolve": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Sundering Growth": {
+      "observed_games": 3,
+      "played_games": 3,
+      "cast_games": 3,
+      "event_counts": {
+        "spell_cast": 3,
+        "stack_resolve": 3
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Harmonic Sliver": {
+      "observed_games": 3,
+      "played_games": 3,
+      "cast_games": 3,
+      "event_counts": {
+        "spell_cast": 4,
+        "stack_resolve": 8,
+        "combat": 4,
+        "damage": 9,
+        "zone_change": 2,
+        "ability_triggered": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Pulmonic Sliver": {
+      "observed_games": 1,
+      "played_games": 1,
+      "cast_games": 1,
+      "event_counts": {
+        "spell_cast": 2,
+        "stack_resolve": 4,
+        "ability_triggered": 2,
+        "zone_change": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Poultice Sliver": {
+      "observed_games": 2,
+      "played_games": 2,
+      "cast_games": 2,
+      "event_counts": {
+        "spell_cast": 2,
+        "stack_resolve": 4,
+        "combat": 5,
+        "damage": 4,
+        "mana": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Sentinel Sliver": {
+      "observed_games": 3,
+      "played_games": 3,
+      "cast_games": 3,
+      "event_counts": {
+        "spell_cast": 7,
+        "ability_triggered": 6,
+        "stack_resolve": 16,
+        "combat": 6,
+        "damage": 10
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Tempered Sliver": {
+      "observed_games": 5,
+      "played_games": 5,
+      "cast_games": 5,
+      "event_counts": {
+        "spell_cast": 5,
+        "stack_resolve": 15,
+        "combat": 14,
+        "damage": 10,
+        "ability_triggered": 10,
+        "zone_change": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Megantic Sliver": {
+      "observed_games": 2,
+      "played_games": 2,
+      "cast_games": 2,
+      "event_counts": {
+        "discard": 1,
+        "spell_cast": 2,
+        "stack_resolve": 3,
+        "combat": 4,
+        "damage": 3
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Manaweft Sliver": {
+      "observed_games": 1,
+      "played_games": 1,
+      "cast_games": 1,
+      "event_counts": {
+        "spell_cast": 1,
+        "stack_resolve": 1,
+        "mana": 3
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Rumor Gatherer": {
+      "observed_games": 2,
+      "played_games": 2,
+      "cast_games": 2,
+      "event_counts": {
+        "spell_cast": 2,
+        "stack_resolve": 2,
+        "ability_triggered": 14,
+        "combat": 2,
+        "damage": 4,
+        "zone_change": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Helpful Hunter": {
+      "observed_games": 3,
+      "played_games": 3,
+      "cast_games": 3,
+      "event_counts": {
+        "spell_cast": 5,
+        "stack_resolve": 13,
+        "ability_triggered": 7,
+        "damage": 3,
+        "zone_change": 2,
+        "combat": 2
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Loyal Warhound": {
+      "observed_games": 4,
+      "played_games": 4,
+      "cast_games": 4,
+      "event_counts": {
+        "spell_cast": 4,
+        "stack_resolve": 6,
+        "combat": 8,
+        "damage": 8
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Twinning Staff": {
+      "observed_games": 3,
+      "played_games": 3,
+      "cast_games": 3,
+      "event_counts": {
+        "spell_cast": 3,
+        "stack_resolve": 9,
+        "ability_triggered": 2,
+        "zone_change": 2,
+        "discard": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Full Flowering": {
+      "observed_games": 1,
+      "played_games": 1,
+      "cast_games": 1,
+      "event_counts": {
+        "spell_cast": 1,
+        "stack_resolve": 5
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Second Harvest": {
+      "observed_games": 2,
+      "played_games": 2,
+      "cast_games": 2,
+      "event_counts": {
+        "spell_cast": 2,
+        "stack_resolve": 5
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Rampant Growth": {
+      "observed_games": 3,
+      "played_games": 3,
+      "cast_games": 3,
+      "event_counts": {
+        "spell_cast": 3,
+        "stack_resolve": 3
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Gemhide Sliver": {
+      "observed_games": 3,
+      "played_games": 3,
+      "cast_games": 3,
+      "event_counts": {
+        "spell_cast": 4,
+        "stack_resolve": 7,
+        "combat": 9,
+        "damage": 7,
+        "mana": 2,
+        "ability_triggered": 1,
+        "zone_change": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Fungus Sliver": {
+      "observed_games": 2,
+      "played_games": 2,
+      "cast_games": 2,
+      "event_counts": {
+        "spell_cast": 2,
+        "stack_resolve": 4,
+        "combat": 3,
+        "damage": 5,
+        "mana": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Horned Sliver": {
+      "observed_games": 2,
+      "played_games": 2,
+      "cast_games": 2,
+      "event_counts": {
+        "spell_cast": 2,
+        "stack_resolve": 5,
+        "combat": 2,
+        "damage": 3
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Nature's Lore": {
+      "observed_games": 1,
+      "played_games": 1,
+      "cast_games": 1,
+      "event_counts": {
+        "spell_cast": 1,
+        "stack_resolve": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Temple Garden": {
+      "observed_games": 2,
+      "played_games": 2,
+      "cast_games": 0,
+      "event_counts": {
+        "replacement_effect": 3,
+        "land_played": 2,
+        "mana": 6
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Lancer Sliver": {
+      "observed_games": 2,
+      "played_games": 2,
+      "cast_games": 2,
+      "event_counts": {
+        "spell_cast": 2,
+        "stack_resolve": 4,
+        "combat": 5,
+        "damage": 5,
+        "mana": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Reflex Sliver": {
+      "observed_games": 3,
+      "played_games": 3,
+      "cast_games": 3,
+      "event_counts": {
+        "spell_cast": 3,
+        "stack_resolve": 5,
+        "combat": 8,
+        "damage": 8,
+        "zone_change": 2,
+        "ability_triggered": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Muscle Sliver": {
+      "observed_games": 2,
+      "played_games": 2,
+      "cast_games": 2,
+      "event_counts": {
+        "spell_cast": 2,
+        "stack_resolve": 2,
+        "combat": 1,
+        "damage": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Growing Ranks": {
+      "observed_games": 1,
+      "played_games": 1,
+      "cast_games": 1,
+      "event_counts": {
+        "spell_cast": 1,
+        "stack_resolve": 1,
+        "ability_triggered": 3
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Arcane Signet": {
+      "observed_games": 3,
+      "played_games": 3,
+      "cast_games": 3,
+      "event_counts": {
+        "spell_cast": 3,
+        "stack_resolve": 4,
+        "mana": 14,
+        "ability_triggered": 1,
+        "zone_change": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Quick Sliver": {
+      "observed_games": 3,
+      "played_games": 3,
+      "cast_games": 3,
+      "event_counts": {
+        "spell_cast": 3,
+        "stack_resolve": 11,
+        "combat": 11,
+        "damage": 13,
+        "ability_triggered": 10
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Brood Sliver": {
+      "observed_games": 5,
+      "played_games": 5,
+      "cast_games": 5,
+      "event_counts": {
+        "spell_cast": 9,
+        "ability_triggered": 35,
+        "stack_resolve": 26,
+        "combat": 8,
+        "damage": 10,
+        "mana": 1,
+        "zone_change": 3
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Venom Sliver": {
+      "observed_games": 7,
+      "played_games": 7,
+      "cast_games": 7,
+      "event_counts": {
+        "spell_cast": 7,
+        "stack_resolve": 18,
+        "combat": 14,
+        "damage": 18,
+        "ability_triggered": 12
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Might Sliver": {
+      "observed_games": 2,
+      "played_games": 2,
+      "cast_games": 2,
+      "event_counts": {
+        "spell_cast": 2,
+        "stack_resolve": 5,
+        "ability_triggered": 1,
+        "combat": 3,
+        "damage": 7
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Firdoch Core": {
+      "observed_games": 3,
+      "played_games": 3,
+      "cast_games": 3,
+      "event_counts": {
+        "spell_cast": 3,
+        "stack_resolve": 4,
+        "mana": 2,
+        "ability_activated": 1,
+        "combat": 2,
+        "damage": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Regal Sliver": {
+      "observed_games": 2,
+      "played_games": 2,
+      "cast_games": 2,
+      "event_counts": {
+        "spell_cast": 3,
+        "stack_resolve": 11,
+        "ability_triggered": 3,
+        "combat": 10,
+        "damage": 8
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Canopy Vista": {
+      "observed_games": 7,
+      "played_games": 7,
+      "cast_games": 0,
+      "event_counts": {
+        "replacement_effect": 8,
+        "land_played": 8,
+        "mana": 30
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Realmwalker": {
+      "observed_games": 4,
+      "played_games": 4,
+      "cast_games": 4,
+      "event_counts": {
+        "spell_cast": 4,
+        "replacement_effect": 4,
+        "stack_resolve": 5,
+        "mana": 1,
+        "combat": 1,
+        "damage": 1,
+        "ability_triggered": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Root Sliver": {
+      "observed_games": 1,
+      "played_games": 1,
+      "cast_games": 1,
+      "event_counts": {
+        "spell_cast": 1,
+        "stack_resolve": 4,
+        "ability_triggered": 3,
+        "zone_change": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Ward Sliver": {
+      "observed_games": 4,
+      "played_games": 4,
+      "cast_games": 4,
+      "event_counts": {
+        "spell_cast": 4,
+        "replacement_effect": 4,
+        "stack_resolve": 5,
+        "damage": 7,
+        "combat": 5,
+        "ability_triggered": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Wood Elves": {
+      "observed_games": 1,
+      "played_games": 1,
+      "cast_games": 1,
+      "event_counts": {
+        "spell_cast": 1,
+        "stack_resolve": 3,
+        "ability_triggered": 1,
+        "combat": 1,
+        "damage": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Cultivate": {
+      "observed_games": 4,
+      "played_games": 4,
+      "cast_games": 4,
+      "event_counts": {
+        "spell_cast": 4,
+        "stack_resolve": 4
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Hivestone": {
+      "observed_games": 3,
+      "played_games": 2,
+      "cast_games": 2,
+      "event_counts": {
+        "spell_cast": 4,
+        "stack_resolve": 4,
+        "zone_change": 2,
+        "discard": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Farseek": {
+      "observed_games": 1,
+      "played_games": 1,
+      "cast_games": 1,
+      "event_counts": {
+        "spell_cast": 1,
+        "stack_resolve": 1
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Forest": {
+      "observed_games": 10,
+      "played_games": 10,
+      "cast_games": 0,
+      "event_counts": {
+        "land_played": 43,
+        "mana": 183,
+        "stack_resolve": 2,
+        "discard": 2
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    },
+    "Plains": {
+      "observed_games": 10,
+      "played_games": 10,
+      "cast_games": 0,
+      "event_counts": {
+        "land_played": 59,
+        "mana": 245,
+        "stack_resolve": 1,
+        "discard": 4
+      },
+      "signal": "played",
+      "note": "Ausência nos logs não prova que a carta não foi comprada ou que seja fraca."
+    }
+  },
+  "methodology": "Metrics combine both players who use identical lists; spell casts and tokens may inflate events; unseen cards are not necessarily drawn or bad. Mirror cannot establish performance vs other decks.",
+  "notes": [
+    "Game 10 ended by 300 s timeout and not counted as a victory.",
+    "Event names matched heuristically from text logs; player-specific card usage and opening hands are not yet available."
+  ]
+}
