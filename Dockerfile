@@ -8,6 +8,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY api.py ./
+COPY examples/ ./examples/
 RUN useradd --create-home --home-dir /home/cardorama --shell /usr/sbin/nologin cardorama && chown -R cardorama:cardorama /app /opt/forge /home/cardorama
 USER cardorama
 EXPOSE 8080
